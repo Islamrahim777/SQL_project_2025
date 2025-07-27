@@ -29,7 +29,7 @@ To identify the highest-paying roles, I filtered data analyst positions by avera
 
 
 with top_paying_jobs as (
-```
+```SQL
 select
     job_id,
     job_schedule_type,
