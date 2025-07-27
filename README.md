@@ -64,4 +64,10 @@ Here's the breakdown of the top data analyst jobs in 2023
 
 # What i learnd
 
+Throughout this adventure, I've turbocharged my SQL toolkit with some serious firepower:
+
+- **Coplex Query crafting: **  Mastered the artbof advanced SQL, merging tables like a pro and wielding WITH clause for ninja-level temp table maneuvers.
+- ** Data Aggregation:** Got cozay with GROUP BY and turend aggregate functions like COUNT() and AVG() into my data summerating sidekicks.
+- ** Analitical Wizardry :**  Leveled up my real-world puzzle-solving skills, turning questions into actionable, insightful SQL queries.
+
 # Conclusion
