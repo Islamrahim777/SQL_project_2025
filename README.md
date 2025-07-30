@@ -27,9 +27,9 @@ EAch query for this project aimed at investigating specific aspects of the data 
 ### 1. Top paying Data Analyst Jobs 
 To identify the highest-paying roles, I filtered data analyst positions by average yearly salary and location, focusing on remote jobs. This query highlights the high paying opportunities in the field.
 
+```SQL
 
 with top_paying_jobs as (
-```SQL
 select
     job_id,
     job_schedule_type,
@@ -57,11 +57,19 @@ left join skills_dim on skills_job_dim.skill_id = skills_dim.skill_id
 order by salary_year_avg desc 
 ```
 
-Here's the breakdown of the top data analyst jobs in 2023
--**Wide Salary Range:** Top 10 paying data analyst roles span from $184,000 to 650,000 indicating significant salary potential in the field.
--**Diverse Employers:** Companies like SmartAsset, Meta, and AT&T are among those offering high salaries, showing a broad interest across different industries.
--**Job titles Variety:** THere's a high diversity in job titles, from Data Analyst to Director of Analytics, reflecting varied roles and specializations with data analytics
+Here's the breakdown of the top data analyst jobs in 2023:
 
+-**Wide Salary Range:** Top 10 paying data analyst roles span from $184,000 to 650,000 indicating significant salary potential in the field.
+
+-**Diverse Employers:** Companies like SmartAsset, Meta, and AT&T are among those offering high salaries, showing a broad interest across different industries.
+
+-**Job titles Variety:** THere's a high diversity in job titles, from Data Analyst to Director of Analytics, reflecting varied roles and specializations with data analytics.
+
+![Top Paying Roles](/image/)
+*The bargraf vizualizing the salary for the top 10 salaries for data analysts; ChatGPT generated this graph from my SQL query results*
+
+### 2. Skills fro Top Paying Jobs
+To understand what skills are required for the top-paying jobs, I joined the job postings with the skills data, providing insights into what employers value for high-compensation roles.
 
 ```sql
  Question: What skills are required for the top-paying Data Analyst jobs?
@@ -95,7 +103,18 @@ limit
     10
 ```
 
-3 
+Here's the breakdown of the most demanded skills for the top 10 highest paying data analyst jobs in 2023:
+
+-**SQL** is leading with bold count of 8
+-**Python** follows closely with a bold count of 7.
+-**Tableau** is also highly sought after, with a bold count of 6. Other skills like **R**, **Snowflake**, **Pandas**, and **Excel** show varying degrees of demand.
+*Bar graph visualizing the count off skills for the top 10 paying jobs for data analysts; ChatGPT generated this graph from my SQL query results*
+
+### 3. In-Demand skills for Data Analysts
+
+   This query helped identify the skills most frequently requested in job postings, directing focus to areas with high demand.
+
+   
 ```sql
  Question: What are the most in-demand skills for data analysts?
  -Join to job ostings to inner join table similar to query 2
@@ -121,7 +140,7 @@ order by
 limit
     5
 ```
-4 
+### 4 
 ```sql
 /*
  What are the top skills bassed on the salary?
@@ -150,7 +169,7 @@ limit
 ```
 
 5
-
+```sql
 /* 
      - SQL query to find the top 25 in-demand skills for Data Analysts that work from home
      - the query calculates the demand count and average salary for each skill
@@ -208,14 +227,7 @@ order by
     demand_count desc,
     average_salary desc
 limit
-    25
-
-
-
-
-
-
-```sql
+ 
 
 -- rewriting the query more simple without CTEs
 
